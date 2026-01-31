@@ -5,3 +5,91 @@
   box-sizing: border-box;
   text-decoration: none;
 }
+
+/*Variables*/
+:root {
+  --primary-color: #0065fc;
+  --secondary-color: #deebff;
+  --fourth-color: #000000;
+  --third-color: #f2f2f2;
+  --fifth-color: #ffffff;
+}
+
+/*Code général*/
+
+body {
+  font-family: 'Raleway', sans-serif;
+  font-size: 16px;
+  color: var(--fourth-color);
+}
+
+/*Header*/
+header {
+  width: 100%;
+  height: auto;
+  /* border: 2px solid red; */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  width: 155px;
+  height: auto;
+  padding-left: 50px;
+}
+
+/*Navigation "nav"*/
+nav {
+  display: flex;
+  gap: 80px;
+  padding-right: 50px;
+}
+
+nav a {
+  font-size: 1em;
+  font-weight: 500;
+  cursor: pointer;
+  text-decoration: none; /* supprime le soulignement par défaut */
+  padding-top: 6px;
+  border-top: 2px solid transparent; /* pour éviter le saut au hover */
+  transition:
+    color 0.3s,
+    border-top-color 0.3s; /* animation douce */
+}
+
+nav a:not(.subscriber) {
+  color: var(--fourth-color);
+}
+
+nav a:not(.subscriber):hover {
+  color: var(--primary-color);
+  border-top-color: var(--primary-color);
+}
+.subscriber {
+  color: var(--primary-color);
+  border: none; /* pas de bordure */
+}
+
+/*Section Hero*/
+
+.hero {
+  width: 100%;
+  height: auto;
+  /* border: 2px solid blue; */
+  margin-top: 50px;
+}
+
+.hero h1 {
+  font-size: 1.5em;
+  color: var(--fourth-color);
+  font-weight: 700;
+  padding-left: 50px;
+  padding-bottom: 5px;
+}
+
+.hero span {
+  color: var(--fourt-color);
+  font-weight: 500;
+  padding-left: 50px;
+}
