@@ -23,41 +23,46 @@ body {
   color: var(--fourth-color);
 }
 
+main {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
 h1 {
   font-size: 1.5em;
   color: var(--fourth-color);
   font-weight: 700;
-  padding-left: 50px;
   padding-bottom: 5px;
 }
 
-h3 {
-  padding-left: 40px;
-  font-size: 1.125em;
+h2 {
+  font-size: 1.4em;
   font-weight: 600;
+  color: var(--fourth-color);
+  padding: 30px 0 30px 30px;
 }
 
 /*Header*/
 header {
   width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
   height: auto;
-  /* border: 2px solid red; */
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
 .logo {
-  width: 155px;
+  width: 90px;
   height: auto;
-  padding-left: 50px;
 }
 
 /*Navigation "nav"*/
 nav {
   display: flex;
   gap: 80px;
-  padding-right: 50px;
 }
 
 nav a {
@@ -90,14 +95,12 @@ nav a:not(.subscriber):hover {
 .hero {
   width: 100%;
   height: auto;
-  /* border: 2px solid blue; */
   margin-top: 50px;
 }
 
 .hero span {
   color: var(--fourt-color);
   font-weight: 500;
-  padding-left: 50px;
 }
 
 /*Formulaire de recherche*/
@@ -105,7 +108,6 @@ nav a:not(.subscriber):hover {
 form {
   width: 100%;
   margin-top: 20px;
-  padding-left: 50px;
   display: flex;
   align-items: center;
 }
@@ -134,7 +136,7 @@ form input {
 
 ::placeholder {
   font-size: 1.1em;
-  font-weight: 550;
+  font-weight: 600;
   color: var(--fourth-color);
 }
 
@@ -170,11 +172,10 @@ form input {
 /*les Filtres*/
 
 .filters {
-  width: auto;
+  width: 100%;
   margin-top: 15px;
   display: flex;
   align-items: center;
-  gap: 20px;
 }
 
 .filters span {
@@ -202,6 +203,10 @@ form input {
 }
 
 .filters-item:hover {
+  border: 3px solid var(--secondary-color);
+}
+
+.filters-item:hover {
   background-color: var(--secondary-color);
 }
 
@@ -215,6 +220,98 @@ form input {
   align-items: center;
   position: absolute;
   left: -2px;
+}
+
+.filters-icon i {
   font-size: 1.25em;
   color: var(--primary-color);
+}
+
+.filters-item p {
+  padding-left: 40px;
+  font-size: 1.125em;
+  font-weight: 600;
+}
+
+.info {
+  width: 100%;
+  margin-top: 12px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.info-icon {
+  width: 20px;
+  height: 20px;
+  border: 2px solid var(--third-color);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+
+.info-icon {
+  font-size: 0.6em;
+  font-weight: 500;
+  color: var(--primary-color);
+}
+
+.info p {
+  font-size: 1em;
+  font-weight: 500;
+  color: var(--fourth-color);
+}
+
+/*Section Hébergements*/
+
+.hebergements {
+  width: 100%;
+  margin-top: 30px;
+  margin-bottom: 300px;
+  display: flex;
+  gap: 30px;
+}
+
+.hebergements-main {
+  width: 65%;
+  background-color: var(--third-color);
+  border-radius: 25px;
+}
+
+.hebergements-popular {
+  width: 35%;
+  background-color: var(--third-color);
+  border-radius: 25px;
+}
+
+.hebergements-card {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+}
+
+.card {
+  width: calc(33.333% - 40px);
+  height: 230px;
+  background-color: var(--fifth-color);
+  border-radius: 25px;
+}
+
+.card img {
+  width: 100%;
+  height: 130px;
+  border-radius: 25px 25px 0 0;
+  object-fit: cover;
+}
+
+.hebergements-main-link {
+  display: inline-block;
+  font-size: 1em;
+  font-weight: 600;
+  color: var(--fourth-color);
+  margin: 30px 0 30px 30px;
 }
