@@ -43,6 +43,21 @@ h2 {
   padding: 30px 0 30px 30px;
 }
 
+h3 {
+  font-size: 1em;
+  font-weight: 600;
+  color: var(--fourth-color);
+  padding: 10px 15px 5px 15px;
+}
+
+p {
+  font-size: 0.9em;
+  font-weight: 500;
+  color: var(--fourth-color);
+  padding-left: 15px;
+  padding-bottom: 10px;
+}
+
 /*Header*/
 header {
   max-width: 1440px;
@@ -53,7 +68,7 @@ header {
   align-items: center;
 }
 
-.logo {
+#logo {
   width: 90px;
   height: auto;
 }
@@ -275,10 +290,9 @@ form input {
 
 .hebergements {
   width: 100%;
-  margin-top: 30px;
-  margin-bottom: 300px;
   display: flex;
   gap: 30px;
+  margin-top: 30px;
 }
 
 .hebergements-main {
@@ -287,31 +301,30 @@ form input {
   border-radius: 25px;
 }
 
-.hebergements-popular {
-  width: 35%;
-  background-color: var(--third-color);
-  border-radius: 25px;
-}
-
 .hebergements-card {
   width: 100%;
   display: flex;
+  justify-content: space-between;
   flex-wrap: wrap;
   gap: 30px;
-  justify-content: center;
+  padding: 0 30px;
 }
 
 .card {
-  width: calc(33.333% - 40px);
-  height: 230px;
+  height: 210px;
   background-color: var(--fifth-color);
   border-radius: 25px;
+  overflow: hidden;
+  display: flex;
+  flex: 1 1 30%;
+  flex-direction: column;
+  padding: 5px;
 }
 
 .card img {
   width: 100%;
-  height: 130px;
-  border-radius: 25px 25px 0 0;
+  height: 120px;
+  border-radius: 20px 20px 0 0;
   object-fit: cover;
 }
 
@@ -323,4 +336,30 @@ form input {
   margin: 30px 0 30px 30px;
 }
 
-/* Pour le hearder voir maquette pour la marge du haut et placer le soulignement des liens du menu correctement et reprendre la partie hebergement. */
+.price {
+  font-weight: 600;
+}
+
+.rating {
+  font-size: 0.8em;
+  padding-left: 15px;
+}
+
+.fa-star {
+  margin-right: 2px;
+}
+
+.blue-star {
+  color: var(--primary-color);
+}
+
+.grey-star {
+  color: var(--third-color);
+}
+
+.hebergements-popular {
+  width: 35%;
+  background-color: var(--third-color);
+  border-radius: 20px;
+  padding: 30px;
+}
