@@ -45,10 +45,9 @@ h2 {
 
 /*Header*/
 header {
-  width: 100%;
   max-width: 1440px;
   margin: 0 auto;
-  height: auto;
+  padding: 0 50px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -61,6 +60,7 @@ header {
 
 /*Navigation "nav"*/
 nav {
+  height: 100%;
   display: flex;
   gap: 80px;
 }
@@ -72,9 +72,16 @@ nav a {
   text-decoration: none; /* supprime le soulignement par défaut */
   padding-top: 6px;
   border-top: 2px solid transparent; /* pour éviter le saut au hover */
+  padding: 30px 0;
   transition:
     color 0.3s,
     border-top-color 0.3s; /* animation douce */
+}
+
+nav a:hover,
+nav a:active {
+  color: var(--primary-color);
+  border-top-color: var(--primary-color);
 }
 
 nav a:not(.subscriber) {
@@ -315,3 +322,5 @@ form input {
   color: var(--fourth-color);
   margin: 30px 0 30px 30px;
 }
+
+/* Pour le hearder voir maquette pour la marge du haut et placer le soulignement des liens du menu correctement et reprendre la partie hebergement. */
