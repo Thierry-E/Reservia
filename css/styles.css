@@ -291,8 +291,10 @@ form input {
 .hebergements {
   width: 100%;
   display: flex;
+  align-items: stretch;
   gap: 30px;
   margin-top: 30px;
+  margin-bottom: 300px;
 }
 
 .hebergements-main {
@@ -316,7 +318,7 @@ form input {
   border-radius: 25px;
   overflow: hidden;
   display: flex;
-  flex: 1 1 30%;
+  flex: 1 1 30%; /* La carte occupe une largeur de base de 30 % et peut s’agrandir ou se réduire grâce à flex-grow et flex-shrink */
   flex-direction: column;
   padding: 5px;
 }
@@ -346,7 +348,7 @@ form input {
 }
 
 .fa-star {
-  margin-right: 2px;
+  padding-right: 2px;
 }
 
 .blue-star {
@@ -361,5 +363,61 @@ form input {
   width: 35%;
   background-color: var(--third-color);
   border-radius: 20px;
-  padding: 30px;
+  padding: 0 30px 0 30px;
+}
+
+.populars-main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.populars-icon {
+  font-size: 1.4em;
+}
+
+.populars-card {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.card-item {
+  height: 145px;
+  background-color: var(--fifth-color);
+  border-radius: 20px;
+  display: flex;
+  align-items: stretch;
+  padding: 5px;
+}
+
+.card-item img {
+  width: 30%;
+  height: 100%;
+  border-radius: 20px 0 0 20px;
+  object-fit: cover;
+}
+
+.card-infos {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 60%;
+}
+
+.card-infos h3 {
+  overflow: hidden;
+  margin-bottom: 5px;
+}
+
+.hebergements-popular .card-infos p {
+  margin-bottom: 5px;
+}
+
+.card-infos .rating {
+  display: flex;
+  gap: 5px;
+  font-size: 0.8em;
+  padding-top: 30px;
+  padding-bottom: 10px;
 }
