@@ -321,6 +321,11 @@ form input {
   flex: 1 1 30%; /*La carte occupe une largeur de base de 30 % et peut s’agrandir ou se réduire grâce à flex-grow et flex-shrink */
   flex-direction: column;
   padding: 5px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.card:hover {
+  transform: scale(1.1);
 }
 
 .card img {
@@ -425,16 +430,25 @@ form input {
 /* Section Activités */
 .activites {
   width: 100%;
+  margin-bottom: 50px;
 }
 
 .activites-container {
   width: 100%;
-  height: 480px;
+  height: 500px;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: 1fr 1fr 1fr;
   gap: 30px;
   padding-left: 30px;
+}
+
+.activites-container a {
+  transition: transform 0.3s ease-in-out;
+}
+
+.activites-container a:hover {
+  transform: scale(1.1);
 }
 
 .activites-card {
@@ -464,19 +478,19 @@ form input {
 
 .card-port img,
 .card-calanques img {
-  height: 450px;
+  height: 440px;
 }
 
 .card-pomegues {
   grid-area: 1 / 2 / 3 / 3;
 }
 .card-longchamp {
-  grid-area: 2/ 4 / 4 / 5;
+  grid-area: 2/ 4 / 4/ 5;
 }
 
 .card-pomegues img,
 .card-longchamp img {
-  height: 246px;
+  height: 263px;
 }
 
 .card-frioul {
@@ -484,12 +498,13 @@ form input {
 }
 
 .card-notre-dame {
-  grid-area: 1 / 4 / 2 / 5;
+  grid-area: 1 / 4 / 2/ 5;
 }
 
 .card-frioul img,
 .card-notre-dame img {
-  height: 100px;
+  height: 87px;
+  aspect-ratio: 19/6;
 }
 
 .card-notre-dame img {
@@ -499,4 +514,40 @@ form input {
 .activites-card h3 {
   font-size: 1.2em;
   padding: 15px 20px;
+}
+
+/* Footer */
+
+footer {
+  width: 100%;
+  background-color: var(--third-color);
+  padding: 30px 30px 30px 270px;
+  margin: 0 auto 30px auto;
+  display: flex;
+}
+
+.footer-links {
+  width: 320px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.footer-links h3 {
+  font-size: 1.3em;
+  padding: 0 0 10px 0;
+}
+
+.footer-links a {
+  color: var(--fourth-color);
+}
+
+.footer-el2 {
+  margin-left: 160px;
+}
+
+.footer-el3 {
+  margin-left: 175px;
 }
