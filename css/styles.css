@@ -180,15 +180,15 @@ form input {
   width: 56px;
   height: 56px;
   border: none;
-  border-radius: 20px;
+  border-radius: 0 20px 20px 0;
   background-color: var(--primary-color);
-  position: absolute;
-  left: 350px;
 }
+
 .btn-search-icon i {
   font-size: 1.6em;
   font-weight: 600;
   color: var(--fifth-color);
+  padding-right: 5px;
 }
 
 /*les Filtres*/
@@ -550,4 +550,100 @@ footer {
 
 .footer-el3 {
   margin-left: 175px;
+}
+
+/* Version Tablette 1024px */
+
+@media screen and (max-width: 1024px) {
+  /* Logo*/
+  #logo {
+    margin-left: 25px;
+  }
+
+  /* Section hero */
+
+  .hero {
+    padding-left: 25px;
+  }
+
+  /* Formulaire de recherche */
+
+  form {
+    margin-top: 30px;
+  }
+
+  .btn-search {
+    display: none;
+  }
+
+  .btn-search-icon {
+    display: flex;
+  }
+
+  /* Section Hébergements */
+
+  .hebergements {
+    flex-direction: column;
+  }
+
+  .hebergements-main {
+    width: 100%;
+  }
+
+  .hebergements-popular {
+    width: 100%;
+  }
+
+  .populars-card {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    margin-bottom: 30px;
+  }
+
+  .card-item {
+    width: 33%;
+  }
+
+  .card-item img {
+    width: 45%;
+  }
+
+  /* Section Activités */
+  @media screen and (max-width: 1024px) {
+    .activites-container {
+      width: 100%;
+      max-width: 1000px;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+      margin: 0 auto;
+      padding: 0 30px;
+    }
+
+    /* On enlève tous les grid-area */
+    .card-port,
+    .card-calanques,
+    .card-pomegues,
+    .card-longchamp,
+    .card-frioul,
+    .card-notre-dame {
+      grid-area: auto;
+    }
+
+    .activites-card img {
+      height: 200px;
+    }
+
+    .activites-card h3 {
+      font-size: 1.1em;
+      padding: 15px;
+    }
+  }
+
+  /* Footer */
+  footer {
+    height: 200px;
+    justify-content: space-around;
+    padding: 0 0 0 40px;
+  }
 }
