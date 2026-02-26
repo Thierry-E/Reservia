@@ -60,10 +60,11 @@ p {
 
 /*Header*/
 header {
+  width: 100%;
   max-width: 1440px;
   margin: 0 auto;
-  padding: 0 50px 0 0;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
 }
@@ -77,7 +78,9 @@ header {
 nav {
   height: 100%;
   display: flex;
+  flex-wrap: wrap;
   gap: 80px;
+  margin-left: auto;
 }
 
 nav a {
@@ -107,12 +110,14 @@ nav a:not(.subscriber):hover {
   color: var(--primary-color);
   border-top-color: var(--primary-color);
 }
+
+.header-right {
+  margin-left: 80px;
+}
 .subscriber {
   color: var(--primary-color);
   border: none; /* pas de bordure */
 }
-
-/*Section Hero*/
 
 .hero {
   width: 100%;
@@ -180,8 +185,10 @@ form input {
   width: 56px;
   height: 56px;
   border: none;
-  border-radius: 0 20px 20px 0;
+  border-radius: 15px;
   background-color: var(--primary-color);
+  position: absolute;
+  right: 20px;
 }
 
 .btn-search-icon i {
@@ -645,5 +652,112 @@ footer {
     height: 200px;
     justify-content: space-around;
     padding: 0 0 0 40px;
+  }
+}
+
+/* Version Mobile 768px*/
+
+@media screen and (max-width: 768px) {
+  /* Header */
+
+  header {
+    padding-top: 50px;
+  }
+
+  nav {
+    order: 2;
+    width: 100%;
+    gap: 0;
+    margin-top: 25px;
+  }
+
+  nav a:not(.subscriber) {
+    width: 50%;
+    text-align: center;
+    padding: 10px 0;
+    border-top: none;
+    border-bottom: 2px solid var(--third-color);
+  }
+
+  nav a:not(.subscriber):hover {
+    border-top: none;
+    border-bottom: 2px solid var(--primary-color);
+  }
+
+  .subscriber {
+    width: auto;
+    order: -1;
+    margin: 0 45px 0 0;
+  }
+
+  /*Formulaire de recherche*/
+  form {
+    margin-top: 35px;
+  }
+
+  /* Section hero*/
+
+  .hero {
+    margin-top: 40px;
+  }
+
+  h1 {
+    font-size: 1.4em;
+    padding-bottom: 15px;
+  }
+
+  /* div Filters*/
+
+  .filters {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .filters span {
+    padding-top: 30px;
+  }
+
+  .filters-container {
+    width: 100%;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 20px 0 0 0;
+  }
+
+  .filters-item {
+    height: 46px;
+    flex: 0 0 48%;
+    padding: 15px 10px;
+    align-items: center;
+    position: relative;
+  }
+
+  .filters-icon {
+    width: 45px;
+    height: 45px;
+    left: 0;
+  }
+
+  .filters-item p {
+    font-size: 1em;
+    padding: 5px 0 5px 42px;
+  }
+
+  .info {
+    margin-top: 35px;
+  }
+
+  .info p {
+    font-size: 1.1em;
+    padding-left: 10px;
+  }
+
+  .hebergements,
+  .activites {
+    display: none;
+  }
+
+  footer {
+    display: none;
   }
 }
