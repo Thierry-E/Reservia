@@ -789,11 +789,33 @@ footer {
     width: 100%;
   }
 
-  .activites {
-    display: none;
+  /* Section activites */
+
+  .activites h2 {
+    font-size: 1.2em;
   }
 
+  .activites-container {
+    height: auto;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(6, 1fr);
+  }
+
+  /* Footer */
+
   footer {
-    display: none;
+    height: auto;
+    flex-direction: column;
+  }
+
+  .footer-el1,
+  .footer-el2,
+  .footer-el3 {
+    width: 100%;
+    margin: 30px 0 0 0;
+  }
+
+  .footer-el3 {
+    margin-bottom: 30px;
   }
 }
